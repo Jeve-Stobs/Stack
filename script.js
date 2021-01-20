@@ -32,7 +32,7 @@ class Stage {
     this.camera.position.z = 2;
     this.camera.lookAt(new THREE.Vector3(0, 0, 0));
     //light
-    this.light = new THREE.DirectionalLight(0xffffff, 0.5);
+    this.light = new THREE.DirectionalLight(0xffffff, 0.6);
     this.light.position.set(0, 499, 0);
     this.scene.add(this.light);
     this.softLight = new THREE.AmbientLight(0xffffff, 0.4);
