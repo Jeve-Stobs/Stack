@@ -189,7 +189,7 @@ class Game {
     this.tick();
     this.updateState(this.STATES.READY);
     document.addEventListener('keydown', e => {
-      if (e.keyCode == 32)j
+      if (e.keyCode == 32)
         this.onAction();
     });
     document.addEventListener('click', e => {
