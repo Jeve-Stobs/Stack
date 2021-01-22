@@ -19,7 +19,7 @@ class Stage {
       alpha: true
     });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setClearColor('rD0CBC7,58,180', 1);
+    this.renderer.setClearColor('#000000', 1);
     this.container.appendChild(this.renderer.domElement);
     // scene
     this.scene = new THREE.Scene();
@@ -190,7 +190,9 @@ class Game {
     this.updateState(this.STATES.READY);
     document.addEventListener('keydown', e => {
       if (e.keyCode == 32)
-        this.onAction();
+      this.onAction();
+       
+
     });
     document.addEventListener('click', e => {
       this.onAction();
