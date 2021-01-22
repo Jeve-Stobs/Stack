@@ -45,7 +45,7 @@ class Stage {
     TweenLite.to(this.camera.lookAt, speed, { y: y, ease: Power1.easeInOut });
   }
   onResize() {
-    let viewSize = 30;
+    let viewSize = 50;
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.camera.left = window.innerWidth / -viewSize;
     this.camera.right = window.innerWidth / viewSize;
