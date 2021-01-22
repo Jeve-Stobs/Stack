@@ -28,7 +28,7 @@ class Stage {
     let d = 20;
     this.camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, -100, 1000);
     this.camera.position.x = 2;
-    this.camera.position.y = 2;
+    this.camera.position.y = 1.5;
     this.camera.position.z = 2;
     this.camera.lookAt(new THREE.Vector3(0, 0, 0));
     //light
@@ -45,7 +45,7 @@ class Stage {
     TweenLite.to(this.camera.lookAt, speed, { y: y, ease: Power1.easeInOut });
   }
   onResize() {
-    let viewSize = 50;
+    let viewSize = 45;
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.camera.left = window.innerWidth / -viewSize;
     this.camera.right = window.innerWidth / viewSize;
