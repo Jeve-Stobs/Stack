@@ -19,7 +19,7 @@ html, body {
   text-align: center;
   font-size: 10vh;
   transition: transform 0.5s ease;
-  color: #333344;
+  color: whitesmoke;
   transform: translatey(-200px) scale(1);
 }
 #container #game {
@@ -44,7 +44,7 @@ html, body {
   transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 0;
   transform: translatey(-50px);
-  color: #333344;
+  color: whitesmoke;
 }
 #container .game-over h2 {
   margin: 0;
@@ -66,10 +66,10 @@ html, body {
   transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 0;
   transform: translatey(-50px);
-  border: 3px solid #333344;
+  border: 3px solid whitesmoke;
   padding: 10px 20px;
   background-color: transparent;
-  color: #333344;
+  color: whitesmoke;
   font-size: 30px;
 }
 #container #instructions {

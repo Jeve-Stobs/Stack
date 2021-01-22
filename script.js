@@ -16,23 +16,23 @@ class Stage {
     // renderer
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: false
+      alpha: true
     });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setClearColor('#D0CBC7', 1);
+    this.renderer.setClearColor('rD0CBC7,58,180', 1);
     this.container.appendChild(this.renderer.domElement);
     // scene
     this.scene = new THREE.Scene();
     // camera
     let aspect = window.innerWidth / window.innerHeight;
-    let d = 20;
+    let d = 10;
     this.camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, -100, 1000);
     this.camera.position.x = 2;
     this.camera.position.y = 1.5;
     this.camera.position.z = 2;
     this.camera.lookAt(new THREE.Vector3(0, 0, 0));
     //light
-    this.light = new THREE.DirectionalLight(0xffffff, 0.5);
+    this.light = new THREE.DirectionalLight(0xffffff, 0.6);
     this.light.position.set(0, 499, 0);
     this.scene.add(this.light);
     this.softLight = new THREE.AmbientLight(0xffffff, 0.3);
