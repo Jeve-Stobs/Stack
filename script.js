@@ -87,7 +87,7 @@ class Block {
     // state
     this.state = this.index > 1 ? this.STATES.ACTIVE : this.STATES.STOPPED;
     // set direction
-    this.speed = -0.1 - (this.index * 0.007);
+    this.speed = -0.05 - (this.index * 0.00007);
     if (this.speed < -4)
       this.speed = -4;
     this.direction = this.speed;
