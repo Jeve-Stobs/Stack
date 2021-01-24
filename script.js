@@ -87,9 +87,9 @@ class Block {
     // state
     this.state = this.index > 1 ? this.STATES.ACTIVE : this.STATES.STOPPED;
     // set direction
-    this.speed = -0.05 - (this.index * 0.00007);
-    if (this.speed < -4)
-      this.speed = -4;
+    this.speed = -0.1 - (this.index * 0.0007);
+		if(this.speed < -4) this.speed = -4;
+		this.direction = this.speed;
     this.direction = this.speed;
     // create block
     let geometry = new THREE.BoxGeometry(this.dimension.width, this.dimension.height, this.dimension.depth);
