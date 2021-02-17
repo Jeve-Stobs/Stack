@@ -1,4 +1,3 @@
-"use strict";
 console.clear();
 class Stage {
   constructor() {
@@ -58,7 +57,7 @@ class Block {
   constructor(block) {
     // set size and position
     this.STATES = { ACTIVE: 'active', STOPPED: 'stopped', MISSED: 'missed' };
-    this.MOVE_AMOUNT = 12;
+    this.MOVE_AMOUNT = 10;
     this.dimension = { width: 0, height: 0, depth: 0 };
     this.position = { x: 0, y: 0, z: 0 };
     this.targetBlock = block;
@@ -257,9 +256,9 @@ class Game {
     if (newBlocks.chopped) {
       this.choppedBlocks.add(newBlocks.chopped);
       let positionParams = { y: '-=30', ease: Power1.easeIn, onComplete: () => this.choppedBlocks.remove(newBlocks.chopped) };
-      let rotateRandomness = 10;
+      let rotateRandomness = 8;
       let rotationParams = {
-        delay: 0.05,
+        delay: 0.5,
         x: newBlocks.plane == 'z' ? ((Math.random() * rotateRandomness) - (rotateRandomness / 2)) : 0.1,
         z: newBlocks.plane == 'x' ? ((Math.random() * rotateRandomness) - (rotateRandomness / 2)) : 0.1,
         y: Math.random() * 0.1,
